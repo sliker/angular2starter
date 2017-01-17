@@ -1,0 +1,12 @@
+{
+  "plugins": [
+    "stylelint-scss"
+  ],
+  "rules": {
+    "declaration-block-trailing-semicolon": null,
+    "no-invalid-double-slash-comments": null,
+    "selector-pseudo-element-colon-notation": "single",
+    "declaration-block-properties-order": "alphabetical",
+    "max-nesting-depth": 2
+  }
+}

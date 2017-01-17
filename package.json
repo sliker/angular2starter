@@ -1,0 +1,90 @@
+{
+  "name": "angular2webpackstarter",
+  "version": "1.0.0",
+  "description": "Angular 2, webpack, sass starter project",
+  "main": "src/index.html",
+  "scripts": {
+    "start": "webpack-dev-server --inline --hot --progress --port 3000",
+    "test": "karma start",
+    "build": "rimraf dist && webpack --config config/webpack.prod.js --progress --profile --bail"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sliker/angular2starter.git"
+  },
+  "keywords": [
+    "angular2",
+    "webpack",
+    "bootstrap",
+    "sass",
+    "typescript",
+    "redux",
+    "starter"
+  ],
+  "author": {
+    "name": "David Velásquez",
+    "email": "zero.blend@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sliker/angular2starter/issues"
+  },
+  "homepage": "https://github.com/sliker/angular2starter#readme",
+  "dependencies": {
+    "@angular/common": "~2.4.1",
+    "@angular/compiler": "~2.4.1",
+    "@angular/core": "~2.4.1",
+    "@angular/forms": "~2.4.1",
+    "@angular/http": "~2.4.1",
+    "@angular/platform-browser": "~2.4.1",
+    "@angular/platform-browser-dynamic": "~2.4.1",
+    "@angular/router": "~3.4.0",
+    "@ngrx/core": "^1.2.0",
+    "@ngrx/store": "^2.2.1",
+    "@ngrx/store-devtools": "^3.2.2",
+    "@ngrx/store-log-monitor": "^3.0.2",
+    "core-js": "^2.4.1",
+    "ngrx-store-freeze": "^0.1.6",
+    "ngrx-store-logger": "^0.1.7",
+    "reselect": "^2.5.4",
+    "rxjs": "5.0.1",
+    "zone.js": "^0.7.4"
+  },
+  "devDependencies": {
+    "@angularclass/hmr": "^1.2.2",
+    "@angularclass/hmr-loader": "^3.0.2",
+    "@types/jasmine": "^2.5.35",
+    "@types/node": "^6.0.45",
+    "angular2-template-loader": "^0.4.0",
+    "awesome-typescript-loader": "^2.2.4",
+    "codelyzer": "^2.0.0-beta.4",
+    "css-loader": "^0.23.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.8.5",
+    "html-loader": "^0.4.3",
+    "html-webpack-plugin": "^2.15.0",
+    "jasmine-core": "^2.4.1",
+    "karma": "^1.2.0",
+    "karma-jasmine": "^1.0.2",
+    "karma-phantomjs-launcher": "^1.0.2",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-webpack": "^1.8.0",
+    "node-sass": "^4.1.1",
+    "null-loader": "^0.1.1",
+    "phantomjs-prebuilt": "^2.1.7",
+    "raw-loader": "^0.5.1",
+    "rimraf": "^2.5.2",
+    "sass-loader": "^4.1.1",
+    "style-loader": "^0.13.1",
+    "stylelint": "^7.7.1",
+    "stylelint-scss": "^1.4.1",
+    "stylelint-webpack-plugin": "^0.4.2",
+    "to-string-loader": "^1.1.5",
+    "tslint": "^4.3.1",
+    "tslint-loader": "^3.3.0",
+    "typescript": "~2.0.10",
+    "webpack": "^1.13.0",
+    "webpack-dev-server": "^1.14.1",
+    "webpack-merge": "^0.14.0"
+  }
+}
