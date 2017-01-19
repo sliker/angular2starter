@@ -11,7 +11,7 @@ angular 2 style guide.
 - Ngrx (Redux)
 - Typescript
 - Sass
-- Bootstrap
+- Bootstrap styles
 - Tslint
 - Stylelint
 - Karma/Jasmine testing
@@ -27,12 +27,25 @@ npm start
 
 go to [http://localhost:3000](http://localhost:3000) in your browser
 
+## Ngrx log monitor
+
+The ngrx log monitor can be enabled or disabled with the environment variable (DEV_TOOLS) on `package.json` file.
+
+Commands:
+- Toggle: `ctrl + h`
+- Change position: `ctrl + m`
+
+# Bootstrap styles
+
+Customize Bootstrap variables in `src/sass/bootstrap/_variables.scss`
+
+Bootstrap styles can be enabled / disabled in `.bootstraprc`
 
 ## Counter component
 Is a demo component
 
 ### Todo:
-- Bootstrap
+- Router
 - AOT
 - Firebase
 - Server side rendering

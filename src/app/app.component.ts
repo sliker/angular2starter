@@ -7,4 +7,10 @@ import '../sass/main.scss';
     selector: 'my-app',
     templateUrl: './app.component.html'
 })
-export class AppComponent {}
+export class AppComponent {
+    devTools: boolean;
+
+    constructor() {
+        this.devTools = process.env.DEV_TOOLS || false;
+    }
+}

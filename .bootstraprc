@@ -1,0 +1,68 @@
+{
+  "bootstrapVersion": 3,
+  "styleLoaders": ["style-loader", "css-loader", "sass-loader"],
+
+  "preBootstrapCustomizations": "./src/sass/bootstrap/_variables.scss",
+
+  "styles": {
+    // mixins
+    "mixins": true,
+    // Reset and dependencies
+    "normalize": true,
+    "print": true,
+    "glyphicons": true,
+    // Core CSS
+    "scaffolding": true,
+    "type": true,
+    "code": true,
+    "grid": true,
+    "tables": true,
+    "forms": true,
+    "buttons": true,
+    // Components
+    "component-animations": true,
+    "dropdowns": true,
+    "button-groups": true,
+    "input-groups": true,
+    "navs": true,
+    "navbar": true,
+    "breadcrumbs": true,
+    "pagination": true,
+    "pager": true,
+    "labels": true,
+    "badges": true,
+    "jumbotron": true,
+    "thumbnails": true,
+    "alerts": true,
+    "progress-bars": true,
+    "media": true,
+    "list-group": true,
+    "panels": true,
+    "wells": true,
+    "responsive-embed": true,
+    "close": true,
+    // Components w/ JavaScript
+    "modals": false,
+    "tooltip": false,
+    "popovers": false,
+    "carousel": false,
+    // Utility classes
+    "utilities": true,
+    "responsive-utilities": true
+  },
+
+  "scripts": {
+    "transition": false,
+    "alert": false,
+    "button": false,
+    "carousel": false,
+    "collapse": false,
+    "dropdown": false,
+    "modal": false,
+    "tooltip": false,
+    "popover": false,
+    "scrollspy": false,
+    "tab": false,
+    "affix": false
+  }
+}
