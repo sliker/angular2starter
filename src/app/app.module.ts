@@ -10,13 +10,17 @@ import { AppState, rootReducer } from './reducers';
 
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
-import { CounterModule } from './counter/counter.module';
+import { HomeModule } from './home/home.module';
+import { AboutUsModule } from './about-us/about-us.module';
+
+import { AppRoutingModule }     from './app-routing.module';
 
 @NgModule({
     imports: [
         BrowserModule,
         SharedModule,
-        CounterModule,
+        HomeModule,
+        AboutUsModule,
         StoreModule.provideStore(rootReducer),
         StoreDevtoolsModule.instrumentStore({
             monitor: useLogMonitor({
@@ -24,6 +28,7 @@ import { CounterModule } from './counter/counter.module';
                 position: 'right'
             })
         }),
+        AppRoutingModule,
         StoreLogMonitorModule
     ],
     declarations: [

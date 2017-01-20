@@ -1,0 +1,12 @@
+#!/bin/sh
+#
+# Pre-Commit hooks
+# If tslint fail abort commit
+echo "Running tslint and stylelint"
+
+npm run tslint && npm run stylelint
+RESULT=$?
+
+[ $RESULT -ne 0 ] && echo "Tests (or tasks) failed, aborting the commit" && exit 1
+
+echo "All tests passed, commiting your changes" && exit 0

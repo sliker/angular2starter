@@ -11,7 +11,7 @@ angular 2 style guide.
 - Ngrx (Redux)
 - Typescript
 - Sass
-- Bootstrap styles
+- Bootstrap 3 styles
 - Tslint
 - Stylelint
 - Karma/Jasmine testing
@@ -45,7 +45,9 @@ Bootstrap styles can be enabled / disabled in `.bootstraprc`
 Is a demo component
 
 ### Todo:
-- Router
+- Router store
+- 404
+- Tests
 - AOT
 - Firebase
 - Server side rendering

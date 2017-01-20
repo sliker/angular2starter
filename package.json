@@ -6,7 +6,9 @@
   "scripts": {
     "start": "better-npm-run start",
     "test": "karma start",
-    "build": "rimraf dist && webpack --config config/webpack.prod.js --progress --profile --bail"
+    "build": "rimraf dist && webpack --config config/webpack.prod.js --progress --profile --bail",
+    "tslint": "tslint -c tslint.json src/**/*.ts",
+    "stylelint": "stylelint '**/*.scss' -s scss --config .stylelintrc"
   },
   "betterScripts": {
     "start": {

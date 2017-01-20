@@ -2,7 +2,24 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
-        Header
+
+        <nav class="navbar navbar-default">
+
+          <div class="container-fluid">
+
+            <div class="navbar-header">
+              <a [routerLink]="['/home']" class="navbar-brand" >Brand</a>
+            </div>
+
+            <ul class="nav navbar-nav">
+              <li routerLinkActive="active"><a [routerLink]="['/home']">Home <span class="sr-only">(current)</span></a></li>
+              <li routerLinkActive="active"><a [routerLink]="['/about-us']">About us</a></li>
+            </ul>
+
+          </div>
+
+        </nav>
+
       </div>
     </div>
   </div>
