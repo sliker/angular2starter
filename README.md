@@ -44,9 +44,8 @@ Bootstrap styles can be enabled / disabled in `.bootstraprc`
 ## Counter component
 Is a demo component
 
-### Todo:
+### TODO:
 - Router store
-- 404
 - Tests
 - AOT
 - Firebase
