@@ -2,7 +2,7 @@
 ## Important: WIP, do not use
 
 Angular 2 starter pack is a production ready seed repo with the base configuration that follows official 
-angular 2 style guide.
+angular 2 [style guide](https://angular.io/docs/ts/latest/guide/style-guide.html).
 
 # Features 
 

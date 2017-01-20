@@ -12,8 +12,9 @@
             </div>
 
             <ul class="nav navbar-nav">
-              <li routerLinkActive="active"><a [routerLink]="['/home']">Home <span class="sr-only">(current)</span></a></li>
-              <li routerLinkActive="active"><a [routerLink]="['/about-us']">About us</a></li>
+              <li routerLinkActive="active" *ngFor="let item of menuItems">
+                <a [routerLink]="[item.path]">{{ item.name }}</a>
+              </li>
             </ul>
 
           </div>

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 
-import { SITE_TITLE } from '../constants';
+import { siteTitle } from '../constants';
 
 @Component({
     selector: 'my-app-about-us',
@@ -13,6 +13,6 @@ export class AboutUsComponent {
     constructor(titleService: Title) {
         this.titleService = titleService;
 
-        this.titleService.setTitle(`${SITE_TITLE} :: About Us`);
+        this.titleService.setTitle(`${siteTitle} :: About Us`);
     }
 }

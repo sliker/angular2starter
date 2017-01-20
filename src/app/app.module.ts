@@ -1,7 +1,7 @@
 import { NgModule, ApplicationRef } from '@angular/core';
 import { BrowserModule, Title }  from '@angular/platform-browser';
 
-import { removeNgStyles, createNewHosts, createInputTransfer } from '@angularclass/hmr';
+import { createInputTransfer, createNewHosts, removeNgStyles } from '@angularclass/hmr';
 import { Store, StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { StoreLogMonitorModule, useLogMonitor } from '@ngrx/store-log-monitor';
@@ -10,7 +10,7 @@ import { AppState, rootReducer } from './reducers';
 
 import { AppComponent } from './app.component';
 import { NotFoundModule } from './not-found/not-found.module';
-import { SharedModule } from './shared/shared.module';
+import { CoreModule } from './core/core.module';
 import { HomeModule } from './home/home.module';
 import { AboutUsModule } from './about-us/about-us.module';
 
@@ -19,10 +19,10 @@ import { AppRoutingModule }     from './app-routing.module';
 @NgModule({
     imports: [
         BrowserModule,
-        NotFoundModule,
-        SharedModule,
-        HomeModule,
         AboutUsModule,
+        CoreModule,
+        HomeModule,
+        NotFoundModule,
         StoreModule.provideStore(rootReducer),
         StoreDevtoolsModule.instrumentStore({
             monitor: useLogMonitor({

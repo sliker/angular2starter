@@ -1,1 +1,1 @@
-export const SITE_TITLE = 'Angular 2 starter pack';
+export const siteTitle = 'Angular 2 starter pack';

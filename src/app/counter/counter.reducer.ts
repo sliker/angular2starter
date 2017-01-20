@@ -1,8 +1,8 @@
 import { Actions } from './counter.actions';
 import {
-    COUNTER_INCREMENT,
-    COUNTER_DECREMENT,
-    COUNTER_RESET
+    counterIncrement,
+    counterDecrement,
+    counterReset
 } from './counter.action-types';
 import { CounterState } from './counter.model';
 
@@ -12,15 +12,15 @@ export const initialState: CounterState = {
 
 export const counterReducer = (state = initialState, action: Actions)  => {
     switch (action.type) {
-        case COUNTER_INCREMENT:
+        case counterIncrement:
             return Object.assign({}, state , {
                 count: state.count + 1
             });
-        case COUNTER_DECREMENT:
+        case counterDecrement:
             return Object.assign({}, state , {
                 count: state.count - 1
             });
-        case COUNTER_RESET:
+        case counterReset:
             return Object.assign({}, state , {
                 count: 0
             });
