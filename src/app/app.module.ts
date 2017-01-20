@@ -9,6 +9,7 @@ import { StoreLogMonitorModule, useLogMonitor } from '@ngrx/store-log-monitor';
 import { AppState, rootReducer } from './reducers';
 
 import { AppComponent } from './app.component';
+import { NotFoundModule } from './not-found/not-found.module';
 import { SharedModule } from './shared/shared.module';
 import { HomeModule } from './home/home.module';
 import { AboutUsModule } from './about-us/about-us.module';
@@ -18,6 +19,7 @@ import { AppRoutingModule }     from './app-routing.module';
 @NgModule({
     imports: [
         BrowserModule,
+        NotFoundModule,
         SharedModule,
         HomeModule,
         AboutUsModule,
