@@ -9,7 +9,6 @@ import { CounterComponent } from './counter.component';
         CounterComponent
     ],
     exports: [
-        CommonModule,
         CounterComponent
     ]
 })
