@@ -1,5 +1,5 @@
 import { NgModule, ApplicationRef } from '@angular/core';
-import { BrowserModule }  from '@angular/platform-browser';
+import { BrowserModule, Title }  from '@angular/platform-browser';
 
 import { removeNgStyles, createNewHosts, createInputTransfer } from '@angularclass/hmr';
 import { Store, StoreModule } from '@ngrx/store';
@@ -35,6 +35,9 @@ import { AppRoutingModule }     from './app-routing.module';
     ],
     declarations: [
         AppComponent
+    ],
+    providers: [
+        Title
     ],
     bootstrap: [ AppComponent ]
 })
