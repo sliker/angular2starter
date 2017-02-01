@@ -42,11 +42,11 @@ Customize Bootstrap variables in `src/sass/bootstrap/_variables.scss`
 Bootstrap styles can be enabled / disabled in `.bootstraprc`
 
 ## Counter component
-Is a demo component
+Is a Redux demo component
 
 ### TODO:
-- Production Build
 - Router store
 - AOT
 - Firebase
 - Server side rendering
+- Reducer for mobile menu state

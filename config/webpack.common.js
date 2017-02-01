@@ -1,6 +1,7 @@
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 var helpers = require('./helpers');
 
 const ENV = process.env.NODE_ENV = process.env.ENV = 'development';
@@ -57,6 +58,11 @@ module.exports = {
         new webpack.optimize.CommonsChunkPlugin({
             name: ['app', 'vendor', 'polyfills']
         }),
+
+        new CopyWebpackPlugin([{
+            from: helpers.root('src', 'public', 'favicon.ico'),
+            to: 'assets'
+        }]),
 
         new HtmlWebpackPlugin({
             template: 'src/index.html'
