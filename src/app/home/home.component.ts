@@ -13,6 +13,6 @@ export class HomeComponent {
     constructor(titleService: Title) {
         this.titleService = titleService;
 
-        this.titleService.setTitle(`${siteTitle} :: Home`);
+        this.titleService.setTitle(`Home :: ${siteTitle}`);
     }
 }

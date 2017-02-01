@@ -2,6 +2,7 @@ var webpack = require('webpack');
 var webpackMerge = require('webpack-merge');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var StyleLintPlugin = require('stylelint-webpack-plugin');
+var LoaderOptionsPlugin = require("webpack/lib/LoaderOptionsPlugin");
 var commonConfig = require('./webpack.common.js');
 var helpers = require('./helpers');
 
@@ -20,10 +21,12 @@ module.exports = webpackMerge(commonConfig, {
     },
 
     module: {
-        preLoaders: [
+        rules: [
             {
+                enforce: 'pre',
                 test: /\.ts$/,
-                loader: 'tslint'
+                loader: 'tslint-loader',
+                exclude: /(node_modules)/
             }
         ]
     },
@@ -46,7 +49,7 @@ module.exports = webpackMerge(commonConfig, {
     ],
 
     devServer: {
-        port: PORT,
+        port: parseInt(PORT, 10),
         host: HOST,
         historyApiFallback: true,
         watchOptions: {

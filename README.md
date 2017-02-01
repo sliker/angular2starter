@@ -25,7 +25,7 @@ npm install
 npm start
 ``` 
 
-go to [http://localhost:3000](http://localhost:3000) in your browser
+go to [http://localhost:8080](http://localhost:8080) in your browser
 
 ## Ngrx log monitor
 
@@ -45,8 +45,8 @@ Bootstrap styles can be enabled / disabled in `.bootstraprc`
 Is a demo component
 
 ### TODO:
+- Production Build
 - Router store
-- Tests
 - AOT
 - Firebase
 - Server side rendering

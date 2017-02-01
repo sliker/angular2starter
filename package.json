@@ -5,8 +5,9 @@
   "main": "src/index.html",
   "scripts": {
     "start": "better-npm-run start",
-    "test": "karma start",
-    "build": "rimraf dist && webpack --config config/webpack.prod.js --progress --profile --bail",
+    "test": "karma start --single-run --browsers PhantomJS",
+    "test:watch": "karma start",
+    "build": "better-npm-run build",
     "tslint": "tslint -c tslint.json src/**/*.ts",
     "stylelint": "stylelint '**/*.scss' -s scss --config .stylelintrc"
   },
@@ -15,9 +16,15 @@
       "command": "webpack-dev-server --inline --hot --progress",
       "env": {
         "NODE_ENV": "development",
-        "PORT": 3000,
+        "PORT": 8080,
         "HOST": "localhost",
         "DEV_TOOLS": true
+      }
+    },
+    "build": {
+      "command": "rimraf dist && webpack --config config/webpack.prod.js --progress --profile --bail",
+      "env": {
+        "NODE_ENV": "production"
       }
     }
   },
@@ -43,14 +50,14 @@
   },
   "homepage": "https://github.com/sliker/angular2starter#readme",
   "dependencies": {
-    "@angular/common": "~2.4.1",
-    "@angular/compiler": "~2.4.1",
-    "@angular/core": "~2.4.1",
-    "@angular/forms": "~2.4.1",
-    "@angular/http": "~2.4.1",
-    "@angular/platform-browser": "~2.4.1",
-    "@angular/platform-browser-dynamic": "~2.4.1",
-    "@angular/router": "~3.4.0",
+    "@angular/common": "~2.4.5",
+    "@angular/compiler": "~2.4.5",
+    "@angular/core": "~2.4.5",
+    "@angular/forms": "~2.4.5",
+    "@angular/http": "~2.4.5",
+    "@angular/platform-browser": "~2.4.5",
+    "@angular/platform-browser-dynamic": "~2.4.5",
+    "@angular/router": "~3.4.5",
     "@ngrx/core": "^1.2.0",
     "@ngrx/store": "^2.2.1",
     "@ngrx/store-devtools": "^3.2.2",
@@ -67,23 +74,25 @@
     "@angularclass/hmr-loader": "^3.0.2",
     "@types/jasmine": "^2.5.35",
     "@types/node": "^6.0.45",
-    "angular2-template-loader": "^0.4.0",
-    "awesome-typescript-loader": "^2.2.4",
+    "angular2-template-loader": "^0.6.0",
+    "awesome-typescript-loader": "^3.0.0-beta.18",
     "better-npm-run": "0.0.14",
-    "bootstrap-loader": "^1.0.10",
+    "bootstrap-loader": "^2.0.0-beta.3",
     "bootstrap-sass": "^3.3.7",
     "codelyzer": "^2.0.0-beta.4",
-    "css-loader": "^0.23.1",
-    "extract-text-webpack-plugin": "^1.0.1",
-    "file-loader": "^0.8.5",
+    "css-loader": "^0.26.1",
+    "extract-text-webpack-plugin": "2.0.0-beta.5",
+    "file-loader": "^0.9.0",
     "html-loader": "^0.4.3",
-    "html-webpack-plugin": "^2.15.0",
+    "html-webpack-plugin": "^2.16.1",
     "jasmine-core": "^2.4.1",
     "karma": "^1.2.0",
+    "karma-chrome-launcher": "^2.0.0",
     "karma-jasmine": "^1.0.2",
+    "karma-mocha-reporter": "^2.2.2",
     "karma-phantomjs-launcher": "^1.0.2",
     "karma-sourcemap-loader": "^0.3.7",
-    "karma-webpack": "^1.8.0",
+    "karma-webpack": "^2.0.2",
     "node-sass": "^4.1.1",
     "null-loader": "^0.1.1",
     "phantomjs-prebuilt": "^2.1.7",
@@ -97,9 +106,9 @@
     "to-string-loader": "^1.1.5",
     "tslint": "^4.3.1",
     "tslint-loader": "^3.3.0",
-    "typescript": "~2.0.10",
-    "webpack": "^1.13.0",
-    "webpack-dev-server": "^1.14.1",
-    "webpack-merge": "^0.14.0"
+    "typescript": "~2.1.5",
+    "webpack": "2.2.0",
+    "webpack-dev-server": "2.2.1",
+    "webpack-merge": "^2.6.1"
   }
 }
